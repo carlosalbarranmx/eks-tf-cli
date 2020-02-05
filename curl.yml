@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: curl
+  labels:
+    name: curl
+spec:
+  serviceName: "curl"
+  selector:
+    matchLabels:
+      app: curl
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: curl
+    spec:
+      containers:
+      - name: curl
+        image: nightfury1204/alpine-curl
+        command:
+          - "sh"
+          - "-c"
+          - >
+            while true; do
+              sleep 3600;
+            done
