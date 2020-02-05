@@ -15,7 +15,7 @@ def do_work():
             print('AWS - EKS - Terraform : Demo Tool')
             print('Options:')
             print(' --help       -> show this help menu.')
-            print(' --tf         -> execute terraform validate and apply.')
+            print(' --tf         -> run terraform validate and apply.')
             print(' --passtest   -> pass unit test - flask deployment')
             print(' --failtest   -> fail unit test - flask deployment')
             print(' --prepare    -> prepare tests')
